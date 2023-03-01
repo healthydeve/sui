@@ -108,22 +108,11 @@ export type SharedObjectRef = {
 };
 
 /**
- * A reference to a shared object from 0.23.0.
- */
-export type SharedObjectRef_23 = {
-  /** Hex code as string representing the object id */
-  objectId: string;
-
-  /** The version the object was shared at */
-  initialSharedVersion: number;
-};
-
-/**
  * An object argument.
  */
 export type ObjectArg =
   | { ImmOrOwned: SuiObjectRef }
-  | { Shared: SharedObjectRef | SharedObjectRef_23 };
+  | { Shared: SharedObjectRef };
 
 /**
  * A pure argument.
